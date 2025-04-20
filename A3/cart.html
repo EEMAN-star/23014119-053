@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS CDN -->
+</head>
+<body class="bg-[#FBF4E6] font-sans">
+
+    <!-- Header (Navbar) -->
+    <div class="bg-[#00483F] h-[30px] flex justify-center items-center">
+        <p class="font-bold text-white">Welcome to Your Shopping Cart</p>
+    </div>
+    
+    <header>
+        <nav class="absolute flex justify-between w-[90%] bg-white h-[100px] items-center px-[10px] rounded-b-[30px]">
+            <div class="logo">
+                <a href="#" class="text-[#333] font-semibold">BrandLogo</a>
+            </div>
+            <div class="nav-links flex space-x-5">
+                <a href="smartpoptailwind.html" class="text-[#333] font-semibold hover:text-[#00483F]">Home</a>
+                <a href="About.html" class="text-[#333] font-semibold hover:text-[#00483F]">About</a>
+                <a href="login.html" class="text-[#333] font-semibold hover:text-[#00483F]">Login</a>
+                <a href="cart.html" class="text-[#333] font-semibold hover:text-[#00483F]">Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <div class="w-[80%] mx-auto p-5 bg-white rounded-xl shadow-lg text-center my-10">
+        <h1 class="text-[28px] text-[#00483F] mb-5">Your Shopping Cart</h1>
+
+        <!-- Cart Items -->
+        <div class="flex flex-col gap-5 mb-10">
+            <!-- Cart Item 1 -->
+            <div class="flex justify-between w-full bg-white border border-[#ddd] p-5 rounded-xl shadow-sm">
+                <div class="item-image">
+                    <img src="https://via.placeholder.com/150" alt="Product 1" class="w-[150px] h-[150px] object-cover">
+                </div>
+                <div class="item-details ml-5 text-left">
+                    <h3 class="text-[#333] text-[18px] mb-2">Product Name</h3>
+                    <p class="text-[#333] mb-1">Price: $25.99</p>
+                    <p class="text-[#333] mb-1">Quantity: 2</p>
+                    <button class="bg-[#FF6347] text-white py-2 px-5 rounded-md hover:bg-[#FF4500]">Remove</button>
+                </div>
+            </div>
+
+            <!-- Cart Item 2 -->
+            <div class="flex justify-between w-full bg-white border border-[#ddd] p-5 rounded-xl shadow-sm">
+                <div class="item-image">
+                    <img src="https://via.placeholder.com/150" alt="Product 2" class="w-[150px] h-[150px] object-cover">
+                </div>
+                <div class="item-details ml-5 text-left">
+                    <h3 class="text-[#333] text-[18px] mb-2">Product Name</h3>
+                    <p class="text-[#333] mb-1">Price: $15.49</p>
+                    <p class="text-[#333] mb-1">Quantity: 1</p>
+                    <button class="bg-[#FF6347] text-white py-2 px-5 rounded-md hover:bg-[#FF4500]">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Total -->
+        <div class="text-right text-[18px] text-[#333] mt-5">
+            <h2 class="text-[24px] text-[#00483F] mb-5">Total: $67.47</h2>
+            <button class="bg-[#00483F] text-white py-3 px-6 rounded-md text-[16px] hover:bg-[#003a2f]">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#00483F] text-white py-5 text-center">
+        <div class="footer-links mb-2">
+            <a href="#" class="text-white hover:underline mx-4">Privacy Policy</a>
+            <a href="#" class="text-white hover:underline mx-4">Terms of Service</a>
+            <a href="#" class="text-white hover:underline mx-4">Help</a>
+        </div>
+        <p>&copy; 2025 BrandName. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

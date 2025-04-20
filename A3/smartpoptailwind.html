@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00483F',
+                        secondary: '#FBF4E6',
+                        accent: 'red',
+                    },
+                    fontFamily: {
+                        sans: ['Arial', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '2rem',
+                        '3xl': '3rem',
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .aspect-ratio-1-7 {
+                aspect-ratio: 1/7;
+            }
+            .aspect-ratio-8-7 {
+                aspect-ratio: 8/7;
+            }
+            .product:hover .p-btn {
+                display: block;
+            }
+            .side-navbar.sidebar {
+                @apply w-full block z-[4] absolute bg-white h-screen top-0 left-0;
+            }
+            .cart-nav {
+                @apply fixed top-0 right-[-300px] w-[300px] h-full bg-white z-[10] transition-[right] duration-300 ease-in-out overflow-hidden;
+            }
+            .cart-nav.open {
+                @apply right-0;
+            }
+            .cart-nav.close {
+                @apply right-[-300px];
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-secondary">
+    <!-- Header Section -->
+    <header>
+        <div class="bg-accent text-center text-sm py-1.5 px-2.5 text-white">
+            <p>Get 15% off with any variety pack or bundle purchase online!</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <header>
+        <div class="relative z-[1] flex justify-center w-full">
+            <div class="absolute flex justify-between w-[90%] bg-secondary items-center pr-2.5 rounded-b-3xl py-10 px-2.5">
+                <div class="hamburger md:hidden text-2xl cursor-pointer" onclick="myfucktion()">
+                    <span class="hidden">&#9776;</span>
+                </div>
+                <div class="hidden md:flex w-1/5 justify-center gap-2.5 ml-9">
+                    <a href="#" class="font-bold">Shop</a>
+                    <a href="#" class="font-bold">Learn</a>
+                </div>
+                <div class="block-2">The LOGO</div>
+                <div class="hidden md:flex w-1/5 justify-center gap-2.5">
+                    <a href="#" id="finder-dropdown" class="font-bold">Store Finder</a>
+                    <div class="my-dropdown hidden absolute bg-white border border-gray-300 p-2.5 w-[200px] shadow-md z-[1000] mt-5">
+                        <input type="text" placeholder="Search for a city..." class="w-full p-1 mb-1 border border-gray-300 rounded">
+                        <select class="w-full p-1 border border-gray-300 rounded">
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Gujrat">Gujrat</option>
+                            <option value="Lahore">Lahore</option>
+                        </select>
+                    </div>
+                    <a href="#" class="text-black"><i class="fa-solid fa-user"></i></a>
+                    <a href="#" class="text-black cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+                    
+                    <div class="container">
+                        <div class="cart-nav grid grid-rows-[10%_80%_10%]">
+                            <div class="start-cart"><p>Shopping Cart</p></div>
+                            <div class="cart-content flex flex-col overflow-auto">
+                                <div class="emp-cart text-center w-full"><p>EMPTY CART</p></div>
+                                <div class="cart-content"></div>
+                                <div class="close-btn1">X</div>
+                            </div>
+                            <div class="btns flex">
+                                <button class="close-btn bt w-1/2 relative bg-black text-white">Close</button>
+                                <button class="bt w-1/2 bg-yellow-400 text-primary">CheckOut</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <div class="side-navbar">
+            <a href="#" class="close-btn absolute top-5 right-5 text-2xl" onclick="nofucktion()">&times;</a>
+            <div class="ots fixed top-1/4 left-1/3 grid place-items-center transform -translate-x-1/2 -translate-y-1/2">
+                <a href="#" class="pb-2.5">Home</a>
+                <a href="#" class="pb-2.5">Shop</a>
+                <a href="#" class="pb-2.5">Learn</a>
+                <a href="#" class="pb-2.5">Store Finder</a>
+                <a href="#" class="pb-2.5">Account</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <div class="relative z-0 top-7 w-full overflow-hidden rounded-b-[50px]">
+            <img src="./image/jarritos-mexican-soda-9Y_KYtitQvI-unsplash (1).jpg" alt="" class="w-full h-[700px] aspect-ratio-1-7 object-cover object-bottom">
+            <div class="hero-text z-[2] flex flex-col absolute left-[23%] top-[46%] transform -translate-x-1/2 -translate-y-1/2 gap-2 w-[39%]">
+                <h1 class="text-6xl">Chill Better, Drink Smarter</h1>
+                <p class="text-xl">A cold drink that you can feel great about</p>
+                <button class="w-2/5 text-white bg-primary rounded-3xl py-2.5">Shop Now</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Sections -->
+    <div class="b-1 mt-12 mb-12 flex flex-col items-center text-center">
+        <h1 class="text-4xl">feel the ahhh!</h1>
+        <p>Your favorite flavours, turned natural and gut-healthy.</p>
+    </div>
+
+    <div class="mySwiper overflow-hidden relative px-5">
+        <div class="swiper-wrapper flex">
+            <div class="swiper-slide product flex flex-col rounded-xl m-0 py-2.5 text-center font-bold uppercase">
+                <img src="./image/505130011_0_1280x1280.jpg" alt="" class="w-full h-[300px] mix-blend-darken">
+                <span>coffee</span>
+                <p class="p-btn hidden">100$</p>
+                <button class="p-btn hidden">Add To Cart</button>
+            </div>
+            <!-- Repeat for other products -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="chc my-5 flex flex-col items-center">
+        <div class="chc-btn">
+            <button class="wor w-full rounded">Shop All Flavours</button>
+        </div>
+        <div class="body-1 box-border overflow-hidden flex flex-col items-center text-center">
+            <div class="body-1-text-area flex items-center justify-center gap-24">
+                <img src="Screenshot_23-1-2025_185725_.jpeg" alt="">
+                <p class="text-5xl font-extrabold">We don't just taste good,<br>we feel good too!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Content Sections -->
+    <div class="body-2 w-full flex flex-col md:flex-row my-2.5">
+        <div class="body-2-text-area1 w-full md:w-1/2 bg-cover h-[500px] text-white rounded-2xl pl-10 flex items-end pb-5 mb-2.5 md:mb-0">
+            <h1 class="text-4xl">Guess what? <br>The planet benefits <br> from Smart Pop, too!</h1>
+        </div>
+        <div class="body-2-text-area2 w-full md:w-1/2 bg-cover h-[500px] text-white rounded-2xl flex flex-col justify-between py-10 px-5 items-center text-center">
+            <h1 class="text-4xl">Pop party pack<br>₹620/6 cans</h1>
+            <div class="button-body w-4/5 bg-primary rounded-full py-5 px-5 flex items-center justify-between uppercase">
+                <h1 class="text-sm md:text-base">choose your pop</h1>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-3 flex flex-col md:flex-row w-full rounded-3xl bg-pink-300 text-primary">
+        <div class="cont-1 w-full md:w-1/2 p-10 flex flex-col gap-6 text-center md:text-left items-center md:items-start">
+            <h1 class="text-5xl">Purchase More, <br> Save More!</h1>
+            <p class="text-sm font-medium w-full md:w-1/2">Want more for less? Purchase any variety pack or bundle and get 15% off! This means that you can try every flavor - and help your gut - without breaking the bank.</p>
+            <button class="text-sm font-medium w-1/2 md:w-1/3 bg-white text-black rounded-2xl py-2.5 px-5">Explore our Products</button>
+        </div>
+        <div class="cont-2 w-full md:w-1/2 flex flex-col justify-evenly py-20 overflow-hidden">
+            <div class="cont-text flex justify-around h-[100px]">
+                <div><h1 class="text-2xl">330ml</h1><p>Volume per can</p></div>
+                <div><h1 class="text-2xl">87%</h1><p>Volume per can</p></div>
+            </div>
+            <div class="cont-img"><img src="./image/ss-1.jpeg" alt="" class="w-full h-[300px] object-cover object-center"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="body-4 bg-primary rounded-t-3xl w-full flex flex-col text-secondary text-2xl px-10 pt-5 h-[74vh] justify-evenly">
+        <div class="text-footer"><h1>Smart Never Tasted So Good!</h1></div>
+        <footer class="footer-1 flex flex-col md:flex-row w-full h-[35vh] px-2.5">
+            <div class="home-footer flex flex-col gap-2.5 w-full md:w-1/4">
+                <a href="smartpoptailwind.html">Home</a>
+                <a href="About.html">Our Story</a>
+                <a href="login.html">Login/a>
+                <a href="register.html">Register</a>
+                <a href="cart.html">Cart</a>
+            </div>
+            <div class="shop-footer flex flex-col gap-2.5 w-full md:w-1/4 mr-2.5">
+                <a href="">Shop</a>
+                <a href="">Learn</a>
+                <a href="">Help</a>
+                <a href="">More</a>
+            </div>
+            <div class="email-footer flex flex-col gap-2.5 w-full md:w-1/4 mr-2.5">
+                <a href="#">Email: <br>chill@drinksmartpop.com</a>
+                <a href="#">Call us: <br>+91-9876515500</a>
+            </div>
+            <div class="last-footer flex flex-col justify-between w-full md:w-1/4 gap-2.5 pl-2.5 text-sm md:text-base">
+                <p>Join the Smart Pop family to stay up to date with latest flavors and exclusive insights.Unlock 10% OFF your first ORDER</p>
+                <div class="button-body l-foot w-full bg-white text-primary text-xs capitalize py-0.5 pl-2.5 pr-0.5">
+                    <h1 class="font-extralight">Your email address</h1>
+                    <button class="bg-yellow-400 text-primary py-2.5 px-3.5 rounded-2xl border-none w-[90px]">Subscribe</button>
+                </div>
+                <div class="last-footer-icon"></div>
+            </div>
+        </footer>
+        <div class="register-footer"></div>
+        <div class="end-foot mb-7 flex justify-between">
+            <div><p class="text-xs">© 2024 smartpop</p></div>
+            <div class="end-foot-a flex gap-7">
+                <a href=""><p class="text-xs">Shipping policy</p></a>
+                <a href=""><p class="text-xs">Refund policy</p></a>
+                <a href=""><p class="text-xs">Terms of service</p></a>
+                <a href=""><p class="text-xs">Privacy policy</p></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                1000: { slidesPerView: 4, spaceBetween: 25 },
+                800: { slidesPerView: 3, spaceBetween: 25 },
+                600: { slidesPerView: 2, spaceBetween: 20 },
+                400: { slidesPerView: 1, spaceBetween: 10 },
+                200: { slidesPerView: 1, spaceBetween: 10 }
+            }
+        });
+
+        function myfucktion() {
+            var x = document.querySelector(".side-navbar");
+            x.classList.add('sidebar');
+            console.log('hi');
+        }
+        function nofucktion() {
+            var x = document.querySelector(".side-navbar");
+            x.classList.remove('sidebar');
+            console.log('removed');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS CDN -->
+</head>
+<body class="bg-[#FBF4E6] font-sans">
+
+    <!-- Header (Navbar) -->
+    <div class="bg-red-500 h-[30px] flex justify-center items-center">
+        <p class="font-bold text-white m-0">Welcome to the Login Page</p>
+    </div>
+    
+    <header>
+        <nav class="absolute flex justify-between w-[90%] bg-white h-[100px] items-center px-[10px] rounded-b-[30px]">
+            <div class="logo">
+                <a href="#" class="text-[#00483F] font-bold text-[24px]">BrandLogo</a>
+            </div>
+            <div class="nav-links flex space-x-6">
+                <a href="smartpoptailwind.html" class="text-black font-semibold text-[16px] hover:text-[#00483F]">Home</a>
+                <a href="cart.html" class="text-black font-semibold text-[16px] hover:text-[#00483F]">Cart</a>
+                <a href="About.html" class="text-black font-semibold text-[16px] hover:text-[#00483F]">About</a>
+                <a href="register.html" class="text-black font-semibold text-[16px] hover:text-[#00483F]">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Form -->
+    <div class="w-full max-w-[400px] mx-auto p-6 bg-white rounded-xl shadow-lg text-center mt-[80px]">
+        <h1 class="text-[28px] mb-5 text-[#00483F]">Login</h1>
+        
+        <form action="#" method="POST">
+            <div class="mb-4">
+                <input type="text" name="username" placeholder="Username" required class="w-full p-3 text-[16px] border border-[#ddd] rounded-md bg-[#f9f9f9] text-[#333]"/>
+            </div>
+            <div class="mb-4">
+                <input type="password" name="password" placeholder="Password" required class="w-full p-3 text-[16px] border border-[#ddd] rounded-md bg-[#f9f9f9] text-[#333]"/>
+            </div>
+            <button type="submit" class="w-full p-3 bg-[#00483F] text-white rounded-md text-[16px] cursor-pointer mt-4 hover:bg-[#003a2f]">Login</button>
+        </form>
+
+        <a href="#" class="block text-[#00483F] mt-4 text-[14px] hover:underline">Forgot Password?</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-red-500 text-white py-5 text-center">
+        <div class="footer-links mb-2">
+            <a href="#" class="text-white text-[14px] hover:underline mx-4">Privacy Policy</a>
+            <a href="#" class="text-white text-[14px] hover:underline mx-4">Terms of Service</a>
+            <a href="#" class="text-white text-[14px] hover:underline mx-4">Help</a>
+        </div>
+        <p class="text-[14px] mt-2">&copy; 2025 BrandName. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

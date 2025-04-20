@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --white-color: #FBF4E6;
+    --red-color: red;
+    --black-color: black;
+    --green-color: #00483F;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white-color);
+}
+
+/* Header Section */
+.header-1 {
+    background-color: var(--red-color);
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-1 p {
+    font-weight: bold;
+    color: var(--white-color);
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    background-color: var(--white-color);
+    height: 100px;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--green-color);
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: 700;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--green-color);
+}
+
+.input-field {
+    margin: 10px 0;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #003a2f;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    color: var(--green-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--red-color);
+    padding: 20px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.footer-content .footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--white-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 10px;
+}

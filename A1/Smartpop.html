@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+
+  
+</head>
+<body>
+    <header>
+        <div class="header-1">
+            <p>Get 15% off with any variety pack or bundle purchase online!</p>
+        </div>
+    </header>
+    <header>
+      <div class="nav-container">
+          <div class="navbar">
+            <div class="hamburger" onclick="myfucktion()">
+            <span   style="display: none;" style="font-size:30px;cursor:pointer " ">&#9776; </span>
+  </div>
+              <div class="block-1 ">
+                  <a href="#">Shop</a>
+                  <a href="#">Learn</a>
+              </div>
+              <div class="block-2">The LOGO</div>
+              <div class="block-3">
+                  <a href="#" id = "finder-dropdown">Store Finder 
+
+                  </a>
+                  <div class="my-dropdown">
+                    
+                      <input type="text" placeholder="Search for a city..." class="dropdown-search">
+                      <select class="dropdown-select">
+                        <option value="Islamabad">Islamabad</option>
+                        <option value="Gujrat">Gujrat</option>
+                        <option value="Lahore">Lahore</option>
+                      </select>
+                    
+                  </div>
+                  <a href="#" style="color: rgb(0, 0, 0);"><i class="fa-solid fa-user"></i></a>
+                  <a href="#" style="color: rgb(0, 0, 0);"><i class="fa-solid fa-cart-shopping cart-icon"></i> </a>
+                  
+                  <div class="container">
+                  <div class="cart-nav">
+                    <div class="start-cart"><p>Shopping Cart</p></div>
+                    <div class="cart-content">
+                      <div class="emp-cart"><p>EMPTY CART</p></div>
+                      <div class="cart-content"></div>
+
+                      <div class="close-btn1">X</div>
+                    </div>
+                    <div class="btns">
+                    <button class="close-btn bt">Close</button>
+                    <button class=" bt">CheckOut</button>
+                 </div>
+                 </div>
+                </div>
+
+                </div>
+
+          </div>
+      </div>
+
+<!-- sidebar menu -->
+<div class="side-navbar"  >
+
+  <a href="#" class="close-btn" onclick="nofucktion()">&times;</a>
+ <div class="ots"> <a href="#">Home</a>
+  <a href="#">Shop</a>
+  <a href="#">Learn</a>
+  <a href="#">Store Finder</a>
+  <a href="#">Account</a>
+</div>
+</div>
+
+
+
+<script>
+
+function myfucktion()
+{
+  var x = document.querySelector(".side-navbar");
+  x.classList.add('sidebar');
+  console.log('hi');
+}
+function nofucktion()
+{
+  var x = document.querySelector(".side-navbar");
+  x.classList.remove('sidebar');
+  console.log('removed');
+}
+
+
+
+  // function openNav() {
+  //   document.getElementById("mySidebar").style.width = "250px";
+  //   document.getElementById("main").style.marginLeft = "250px";
+  //   }
+  //   function closeNav() {
+  //     document.getElementById("mySidebar").style.width = "0";
+  //     document.getElementById("main").style.marginLeft = "0";
+  //     }
+  //     function toggleSidebar() {
+  //       if (document.getElementById("mySidebar").style.width == "250px") {
+  //         document.getElementById("mySidebar").style.width = "0";
+  //       }
+      // }
+</script>
+
+
+
+
+
+  </header>
+    <main>
+        <div class="hero-section">
+            <img src="./image/jarritos-mexican-soda-9Y_KYtitQvI-unsplash (1).jpg" alt="" style="height: 600px; width: 100%; object-fit: contain;">
+           <div class="hero-text"><h1> Chill Better, 
+                Drink Smarter</h1>
+                <p> A cold drink that you can feel great about</p>
+                <button> Shop Now</button>
+            </div> 
+        </div>
+    </main>
+    <div class="b-1">
+
+        <h1> feel the ahhh!</h1>
+            <p>Your favorite flavours, turned natural and gut-healthy.</p>
+     </div>
+    <div class="mySwiper">
+    
+     <div class="swiper-wrapper ">
+        <div class="swiper-slide product p-1"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>coffee</span><p class="p-btn">100$</p> <button class="p-btn">Add To Cart</button></div>
+        <div class="swiper-slide product p-1" ><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>Classic Cola</span><p class="p-btn">130$</p><button class="p-btn">Add To Cart</button></div>
+        <div class="swiper-slide product p-1" ><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>Pineapple Jalapeno</span><p class="p-btn">120$</p><button class="p-btn">Add To Cart</button></div>
+        <div class="swiper-slide product p-1"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>Lemon Lime</span><p class="p-btn">200$</p><button class="p-btn">Add To Cart</button></div>
+        <div class="swiper-slide product p-1"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>Cold coffee</span><p class="p-btn">250$</p><button class="p-btn">Add To Cart</button></div>
+        <div class="swiper-slide product p-1"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>chocolate coffee</span>
+          <p class="p-btn">400$</p><button class="p-btn">Add To Cart</button></div>
+    </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+
+          
+        </div>
+        <div class="chc">
+            <div class="chc-btn">
+        <button class="wor" style="border-radius: 10px;">Shop All Flavours</button>
+        </div> 
+       <div class="body-1">
+          <div class="body-1-text-area">
+            <img src="Screenshot_23-1-2025_185725_.jpeg" alt="">
+            <p>We don't just taste good,<br>we feel good too!</p>
+          </div>
+        </div>
+        </div>
+        <div class="mySwiper">
+    
+     <div class="swiper-wrapper ">
+        <div class="swiper-slide product"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>coffee</span></div>
+        <div class="swiper-slide product"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>Classic Cola</span></div>
+        <div class="swiper-slide product"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>Pineapple Jalapeno</span></div>
+        <div class="swiper-slide product"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>Lemon Lime</span></div>
+        <div class="swiper-slide product"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>Cold coffee</span></div>
+        <div class="swiper-slide product"><img src="./image/505130011_0_1280x1280.jpg" alt=""> <span>chocolate coffee</span></div>
+    </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+
+          
+        </div>
+
+
+
+
+
+    </div>
+    <div class="body-2">
+        <div class="body-2-text-area1"><h1> Guess what? <br>
+            The planet benefits <br>
+             from Smart Pop, too!</h1></div>
+        <div class="body-2-text-area2"><h1>Pop party pack<br>
+            ₹620/6 cans</h1> 
+            <div class="button-body"><h1>choose your pop</h1> <i class="fa-solid fa-bag-shopping"></i></div>
+        
+        </div>
+    </div>
+    <div class="body-3">
+       <div class="cont-1">
+         <h1> Purchase More, 
+<br> Save More!</h1>
+<p>Want more for less? Purchase any variety 
+    pack or bundle and get 15% off! This means 
+    that you can try every flavor - and help your 
+    gut - without breaking the bank.</p>
+    <button>Explore our Products</button>
+    </div>
+    <div class="cont-2">
+        <div class="cont-text">
+            <div ><h1> 330ml</h1><p>Volume per can</p></div>
+            <div ><h1>87%</h1><p>Volume per can</p></div>
+        </div>
+        <div class="cont-img"><img src="./image/ss-1.jpeg" alt=""></div>
+    </div>
+</div>
+<div class="body-4">
+
+       <div class="text-footer"> <h1>Smart Never Tasted So Good!</h1></div>
+       <footer class="footer-1">
+        <div class ="home-footer">
+            <a href="">Home</a> 
+            <a href="">Products</a>
+            <a href="">Our Story</a>
+            <a href="">Digestive Health</a>
+            <a href="">Ingredients</a>
+            <a href="">FAQ</a>
+            <a href="">Contact</a>
+        </div>
+
+        <div class = "shop-footer ">
+
+            <a href="cart.html">Cart</a>
+            <a href="About.html">About us</a>
+            <a href="login.html">Login</a>
+            <a href="">More</a>
+          
+        </div>
+        <div class="email-footer">
+            <a href="#">Email: <br>
+            chill@drinksmartpop.com</a>
+            <a href="#">Call us: <br>
+            +91-9876515500</a>
+            
+            
+        </div>
+        <div class="last-footer">
+            <p>Join the Smart Pop family to stay 
+                up to date with latest flavors and 
+                exclusive insights.Unlock 10% OFF 
+                your first ORDER</p>
+                <div class="button-body l-foot "><h1>Your email address</h1> <button>Subscribe</button></i></div>
+
+                <div class="last-footer-icon"></div>
+        </div>
+    </footer>
+        <div class="register-footer"></div>
+
+ <div class="end-foot">
+    <div><p> © 2024 smartpop</p></div>
+    <div class="end-foot-a"><a href=""><p> Shipping policy</p></a>
+    <a href=""><p> Refund policy</p></a>
+    <a href=""><p>Terms of service</p></a>
+   <a href=""> <p>Privacy policy</p></a>
+</div>
+ </div>
+ <div class="hello-world"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      // loop: true, // Uncomment if you want infinite loop
+      slidesPerView: 4, // Default number of slides per view
+      spaceBetween: 30, // Default space between slides
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        1000: {
+    slidesPerView: 4,
+    spaceBetween: 25,
+  },
+  800: {
+    slidesPerView: 3,
+    spaceBetween: 25,
+  },
+  600: {
+    slidesPerView: 2,
+    spaceBetween: 20,
+  },
+  400: {
+    slidesPerView: 1,
+    spaceBetween: 10,
+  },
+  200:{
+    slidesPerView:1,
+    spaceBetween:10,
+  }
+}
+});
+  </script>
+  
+<script src="./javascript.js"></script>
+</body>
+</html>
